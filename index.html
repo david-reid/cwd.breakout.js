@@ -4,6 +4,7 @@
         <title>cwd.breakout.js</title>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" type="text/css" href="game.css">
         <script src='fx.js'></script>
         <script src='bricks.js'></script>
         <script src='paddle.js'></script>
@@ -11,6 +12,9 @@
         <script src='game.js'></script>
     </head>
     <body>
-        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="start" style="display:block">
+            <a href="#" onclick="startGame()">start game</a>
+        </div>
+        <canvas id="canvas" style="display:none"></canvas>
     </body>
 </html>

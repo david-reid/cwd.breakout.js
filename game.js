@@ -12,7 +12,6 @@ window.onload = function() {
     ball = new Ball(fx);
     bricks = new Bricks(fx);
     addEventListener('mousemove', mouseMove);
-    start();
 }
 
 window.onresize = function() {
@@ -50,4 +49,12 @@ function move() {
 
 function mouseMove(event) {
     paddle.moveWithMouse(event);
+}
+
+function startGame() {
+    let startDiv = document.getElementById('start');
+    let gameCanvas = document.getElementById('canvas');
+    startDiv.style.display = 'none';
+    gameCanvas.style.display = 'block';
+    start();
 }
