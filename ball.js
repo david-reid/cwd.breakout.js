@@ -82,7 +82,7 @@ class Ball {
 
             if ( bricks.isBrickAtColRow(ballBrickCol,ballBrickRow) ) {
                 bricks.grid[brickIndexUnderBall] = false;
-                bricks.count--;
+                bricks.liveBricks--;
 
                 let prevBallX = this.xpos - this.xvel;
                 let prevBallY = this.ypos - this.yvel;

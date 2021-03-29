@@ -45,6 +45,9 @@ function draw() {
 function move() {
     ball.move();
     ball.collisions(paddle,bricks);
+    if ( bricks.isBrickCountZero()) {
+        gameOver();
+    }
 }
 
 function mouseMove(event) {
@@ -54,7 +57,24 @@ function mouseMove(event) {
 function startGame() {
     let startDiv = document.getElementById('start');
     let gameCanvas = document.getElementById('canvas');
+    let gameOver = document.getElementById('game-over');
     startDiv.style.display = 'none';
     gameCanvas.style.display = 'block';
+    gameOver.style.display = 'none';
     start();
+}
+
+function gameOver() {
+
+    let startDiv = document.getElementById('start');
+    let gameCanvas = document.getElementById('canvas');
+    let gameOver = document.getElementById('game-over');
+    startDiv.style.display = 'none';
+    gameCanvas.style.display = 'none';
+    gameOver.style.display = 'block';
+
+    bricks.reset();
+    ball.reset();
+    paddle.reset();
+    clearInterval(loop);
 }

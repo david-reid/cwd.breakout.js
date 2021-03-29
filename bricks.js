@@ -13,7 +13,7 @@ class Bricks {
         this.brickHeight = 0;
         this.brickGap = 0;
         this.columns = 11;
-        this.rows = 8;
+        this.rows = 1;
         this.grid = null;
         this.liveBricks = 0;
     }
@@ -83,5 +83,9 @@ class Bricks {
                 this.color = this.yellow;
                 break;
         }
+    }
+
+    isBrickCountZero() {
+        return this.liveBricks == 0;
     }
 }
